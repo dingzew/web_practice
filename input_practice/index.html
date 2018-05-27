@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Dingze</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <html>
+  <head>
+    <script type = "text/javascript" src = "http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+  </script>
+  </head>
+
+  <body>
+  <div id = "table">
+    <table>
+      <tr>
+        <th>
+          Houses
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Wade
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id = "button">
+    <input type = "button" value = "Click" 
+           onclick = "alert('welcome to my webpage')">
+  </div>
+
+  <div id = "text">
+    <input type = "file"
+         multiple = "false"
+         accept = "image/*"
+         id = "finput"
+         onchange = "upload()">
+  </div>
+
+  <div id = "button2">
+    <input type = "button" value = "Two way Button" id = "twoWayButton"
+           onclick = twoWay()>
+  </div>
+
+  <canvas id = "firstCanvas"></canvas>
+
+  <p>
+    <input type = "color" id = "colorMap" value = "green" onclick = "doColor()">
+
+  </p>
+
+  <p><input type = "button" value = "change blue" onclick = "goBlue()">
+    <input type = "button" value = "add text" onclick = "addText()">
+    <input type = "button" value = "clear" onclick = "clearCanvas()">
+  </p>
+  <p><input type = "range" min = "10" max = "80" value = "10" id = "drawRect" oninput = "drawRect()"></p>
+
+  <canvas id = "secondCanvas"></canvas>
+
+  <p>
+    <input type = "file" id = "fileUpload" accepct = "image/*" multiple = "false" onchange = "uploadImage()">
+    
+    <input type = "button" value = "clear" onclick = "clearCanvas2()">
+    
+    <input type = "button" value = "change grey" onclick = "changeGrey()">
+  </p>
+    
+  </body>
+  </html>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

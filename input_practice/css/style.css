@@ -1,0 +1,20 @@
+#table {
+  border-color: #FF0000;
+  font-size: 16pt;
+  color: blue;
+}
+
+#button {
+   color: red;
+   font-size: 12pt;
+}
+
+#firstCanvas {
+  width: 200px;
+  height: 100px;
+}
+
+#secondCanvas {
+  width = 300px;
+  height = 200px;
+}
