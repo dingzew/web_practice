@@ -166,7 +166,6 @@ function drawRainbow() {
   for (pixel of image.values()) {
     X = pixel.getX();
     Y = pixel.getY();
-//    outImage.setPixel(X, Y, pixel);
     avgColor = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
     if (Y >= 6 * parseInt(rectSegment)) {
       doRed();
