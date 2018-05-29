@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  Dingze</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <html>
+  <head>
+    <h1>Image Filter, Have fun</h1>
+    <script type = "text/javascript" src = "http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+    </script>
+  </head>
+  
+  <body>
+    <canvas id = "imageCanvas"></canvas>
+    <p>
+      <input type = "file" 
+             mutiple = "false"
+             accept = "image/*"
+             id = "fileUpload"
+             onchange = "uploadImage()">
+    </p>
+    <p>
+      <input type = "button" 
+             id = "GrayScale" 
+             value = "GrayScale" 
+             onclick = "doGray()">
+      
+      <input type = "button" 
+             id = "redFilter" 
+             value = "RedFilter" 
+             onclick = "doRedSingle()">
+      
+      <input type = "button" 
+             id = "rainbowFilter" 
+             value = "RainbowFilter" 
+             onclick = "doRainbow()">
+    </p>
+    
+    <p>
+      <input type = "button" 
+             id = "reset" 
+             value = "reset" 
+             onclick = "reset()">
+    </p>
+  </body>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
