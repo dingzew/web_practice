@@ -22,7 +22,7 @@ function doGray() {
   }
   var canvas =   document.getElementById("imageCanvas");
   image.drawTo(canvas);
-  image = new SimpleImage(file)
+  image = new SimpleImage(file);
 }
 
 function reset() {
@@ -166,6 +166,7 @@ function drawRainbow() {
   for (pixel of image.values()) {
     X = pixel.getX();
     Y = pixel.getY();
+//    outImage.setPixel(X, Y, pixel);
     avgColor = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
     if (Y >= 6 * parseInt(rectSegment)) {
       doRed();
@@ -184,3 +185,33 @@ function drawRainbow() {
     }
   }
 }
+
+
+function doBlur() {
+  for (pixel of image.values()) {
+    var x = pixel.getX();
+    var y = pixel.getY();
+    var rand = Math.random();
+    if (rand < 0.5) {
+      image.setPixel(x, y, image.getPixel(x, y));
+    } else {
+      var deltaX = -x - 1;
+      var deltaY = -y - 1;
+      while (x + deltaX < 0 || x + deltaX > image.getWidth() - 1) {
+       deltaX = genMove();
+}
+      while (y + deltaY < 0 || y + deltaY > image.getHeight() - 1) {
+       deltaY = genMove();
+}
+      image.setPixel(x, y, image.getPixel(x + deltaX, y + deltaY));
+    }
+  }
+  var canvas =   document.getElementById("imageCanvas");
+  image.drawTo(canvas);
+  image = new SimpleImage(file);
+}
+
+  
+  function genMove() {
+    return parseInt(10 * (Math.random() - 0.5));
+  }
