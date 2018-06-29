@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/drawingManagement.js"></script>
+
+    <title>Elastic search V1.0.0</title>
+     <link rel="stylesheet" type="text/css" href="../static/styleMain.css">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="../static/toggle/css/style.css">
+
+    <script>
+        function popup() {
+            window.open("../static/sampleFacet.txt", "myWindow", 'width=800,height=600');
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1 id = "head1">113 Jaquard Prototype</h1>
+
+    <table cellpadding="15">
+        <tr>
+            <td class = "littleHead">Project</td><td><input type="text" id="esCategory" placeholder="jiff-tagged"></td>
+
+            <td class = "littleHead">Project Index</td><td><input type="text" id="esIndex" placeholder="tagged"></td>
+
+             <td class = "littleHead">Facets <a target="_blank" href="../static/sampleFacet.txt" onclick = "popup()"><img src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="13px"/></a></td>
+            <td class = "littleHead"><input type="text" id="SearchTag" placeholder="demand_moments"></td>
+
+        </tr>
+        <tr>
+
+            <td class = "littleHead">Include Words</td><td><input type="text" id="KeyWords" placeholder="peanut,jelly"></td>
+
+            <td class = "littleHead">Exclude Words</td><td><input type="text" id="ExcludeWords" placeholder="good,funny"></td>
+
+            <td class = "littleHead"> Number of Results</td><td><input type="text" id="Nums" placeholder="100"></td>
+        </tr>
+        <tr>
+            <td class = "littleHead">Show Score:</td> <td><div class="check"><input type="checkbox" id="myCheck"><label for="check"></label></div></td>
+            <td class = "littleHead">Only Facet:</td>  <td><div class="check"><input type="checkbox" id="onlyFacetCheck"><label for="check"></label></div></td>
+            <td class = "littleHead">Exact Match:</td>  <td><div class="check"><input type="checkbox" id="exactMatch"><label for="check"></label></div></td>
+        </tr>
+
+    </table>
+
+
+    <button type = "button" onclick="customizedSearch()">Search</button>
+
+
+
+{#    <table>#}
+{#        <tr><td>----------------------------------------------</td></tr>#}
+{#    </table>#}
+
+    <table id = "displayTable" border="4">
+        <tr>
+            <th>Results show here</th>
+        </tr>
+    </table>
+
+</body>
+</html>

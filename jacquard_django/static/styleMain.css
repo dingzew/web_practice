@@ -1,0 +1,56 @@
+body {
+    background-image: url("bg-6-full.jpg");
+}
+
+ #displayTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#displayTable td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#displayTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#displayTable tr:hover {background-color: #ddd;}
+
+#displayTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type=button]:hover {
+    background-color: #45a049;
+}
+
+button[type=button] {
+    width: 15%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#head1 {
+    font: 400 100px/1.5 'Pacifico', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+}
+
+.littleHead {
+    font: 400 20px/1.2 'Merienda One', Helvetica, sans-serif;
+    color: rgba(0,0,0,0.7);
+    text-shadow: 3px 3px 3px #fff;
+}
+
+
+
