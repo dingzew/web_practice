@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../static/drawingManagement.js"></script>
+
+    <title>Elastic search V1.0.0</title>
+     <link rel="stylesheet" type="text/css" href="../static/styleMain.css">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="../static/toggle/css/style.css">
+
+    <script>
+        function popup() {
+            window.open("../static/sampleFacet.txt", "myWindow", 'width=800,height=600');
+        }
+    </script>
+
+</head>
+<body>
+    <img src="../static/113.jpeg" class = "topleft" alt="Smiley face" width="300" height="100" align="left">
+    <img src="../static/loom.jpeg" class = "topright" alt="Smiley face" width="150" height="150" align="right">
+    <h2 id = "head1">
+           113 Jaquard Prototype
+    </h2>
+
+    <table id = "firstTable" cellpadding="20 40">
+        <tr>
+            <td class = "littleHead">Project</td><td>
+            <select id="esCategory">
+              <option value="" selected>Jif Peanut Butter</option>
+              <option value="">UPMC</option>
+              <option value="">Hersey</option>
+              <option value="">Coca Cola</option>
+            </select>
+{#            <input type="text" id="esCategory" placeholder="jiff-tagged">#}
+        </td>
+
+{#            <td class = "littleHead">Project Index</td><td><input type="text" id="esIndex" placeholder="tagged"></td>#}
+
+             <td class = "littleHead">Facets <a target="_blank" href="../static/sampleFacet.txt" onclick = "popup()"><img src="https://shots.jotform.com/kade/Screenshots/blue_question_mark.png" height="15px"/></a></td>
+            <td>
+                <select id= "SearchTag">
+                    <option value="" selected>N/A</option>
+                  <option value="ingredients" selected>ingredients</option>
+                  <option value="flavors">flavors</option>
+                  <option value="attributes">attributes</option>
+                  <option value="where_purchased">where_purchased</option>
+                    <option value="pain_points" >pain_points</option>
+                    <option value="demand_moments" >demand_moments</option>
+                    <option value="day_part" >day_part</option>
+                    <option value="time_of_day" >time_of_day</option>
+                </select>
+{#                <input type="text" id="SearchTag" placeholder="demand_moments">#}
+            </td>
+
+        </tr>
+        <tr>
+
+            <td class = "littleHead">Include</td><td><input type="text" id="KeyWords" placeholder="peanut,jelly"></td>
+
+            <td class = "littleHead">Exclude</td><td><input type="text" id="ExcludeWords" placeholder="good,funny"></td>
+
+
+        </tr>
+    </table>
+    <table cellpadding="25">
+        <tr>
+            <td class = "littleHead">Show Score:  <div class="check"><input type="checkbox" id="myCheck"><label for="check"></label></div></td>
+            <td class = "littleHead">Only Facet:  <div class="check"><input type="checkbox" id="onlyFacetCheck"><label for="check"></label></div></td>
+            <td class = "littleHead">Exact Match: <div class="check"><input type="checkbox" id="exactMatch"><label for="check"></label></div></td>
+            <td class = "littleHead"> Top: <input type="text" id="Nums" placeholder="100"></td>
+        </tr>
+
+
+    </table>
+
+
+    <button type = "button" onclick="customizedSearch()">Search</button>
+
+
+
+{#    <table>#}
+{#        <tr><td>----------------------------------------------</td></tr>#}
+{#    </table>#}
+
+    <table id = "displayTable" border="4">
+        <tr>
+            <th>Results</th>
+        </tr>
+    </table>
+
+</body>
+</html>
